@@ -47,8 +47,8 @@ function addName(event) {
   phoneInput.value = '';
 }
 
-// Función para mostrar la lista de nombres en el DOM
-function renderdatas() {
+// Función para mostrar la lista de nombres del DOM
+/*function renderdatas() {
   nameList.innerHTML = '';
 
   datas.forEach((data, index) => {
@@ -57,7 +57,52 @@ function renderdatas() {
     li.innerHTML += `<button onclick="editName(${index})">Editar</button> <button onclick="deleteName(${index})">Eliminar</button>`;
     nameList.appendChild(li);
   });
+}*/
+
+function renderdatas() {
+  nameList.innerHTML = ''; // Vacía el contenido previo de la tabla
+
+  datas.forEach((data, index) => {
+    const tr = document.createElement('tr'); // Crea una nueva fila
+
+    // Crea y agrega celdas para cada valor en el objeto data
+    const nameCell = document.createElement('td');
+    nameCell.textContent = data.name;
+    tr.appendChild(nameCell);
+
+    const lastNameCell = document.createElement('td');
+    lastNameCell.textContent = data.lastName;
+    tr.appendChild(lastNameCell);
+
+    const emailCell = document.createElement('td');
+    emailCell.textContent = data.email;
+    tr.appendChild(emailCell);
+
+    const phoneCell = document.createElement('td');
+    phoneCell.textContent = data.phone;
+    tr.appendChild(phoneCell);
+
+    // Crea las celdas para los botones de editar y eliminar
+    const editCell = document.createElement('td'); // crea el elmento
+    const editButton = document.createElement('button'); // creo el boton
+    editButton.textContent = 'Editar'; // texto del boton
+    editButton.addEventListener('click', () => editName(index)); // accion al click llama a la funcion corrspondiente
+    editCell.appendChild(editButton); // agrega al boton al td
+    tr.appendChild(editCell); // agrega el td a la fila tr
+
+    const deleteCell = document.createElement('td');
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Eliminar';
+    deleteButton.addEventListener('click', () => deleteName(index));
+    deleteCell.appendChild(deleteButton);
+    tr.appendChild(deleteCell);
+
+    // Agrega la fila completa a la tabla
+    nameList.appendChild(tr);
+  });
 }
+
+
 
 // Función para editar un nombre en la lista
 function editName(index) {

@@ -238,6 +238,10 @@ a .rss {
     filter: invert(100%);
 }
 
+.logoFooter{
+    width: 70px;
+    min-width: 50px;}
+
 a:hover .rss {
     filter: invert(50%);
 }
