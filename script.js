@@ -19,7 +19,7 @@ function addName(event) {
   const lastName = lastNameInput.value.trim();
   const email = emailInput.value.trim();
   const phone = phoneInput.value.trim();
-
+// validacion campo vacio
   if (name === '') {
     alert('Por favor, ingrese un nombre válido.');
     return;
@@ -84,18 +84,22 @@ function renderdatas() {
 
     // Crea las celdas para los botones de editar y eliminar
     const editCell = document.createElement('td'); // crea el elmento
-    const editButton = document.createElement('button'); // creo el boton
-    editButton.textContent = 'Editar'; // texto del boton
-    editButton.addEventListener('click', () => editName(index)); // accion al click llama a la funcion corrspondiente
+    editCell.className = "areaButtonsE";
+    const editButton = document.createElement('i'); // creo el boton
+    //editButton.textContent = 'Editar'; // texto del boton
+    editButton.className = 'bi bi-pencil'; // Agrega CSS para el ícono en vez del texto
+    editCell.addEventListener('click', () => editName(index)); // accion al click llama a la funcion corrspondiente
     editCell.appendChild(editButton); // agrega al boton al td
     tr.appendChild(editCell); // agrega el td a la fila tr
 
     const deleteCell = document.createElement('td');
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Eliminar';
-    deleteButton.addEventListener('click', () => deleteName(index));
+    deleteCell.className = 'areaButtons';
+    const deleteButton = document.createElement('i');
+    deleteButton.className = 'bi bi-trash'; // Agrega CSS para el ícono
+    deleteCell.addEventListener('click', () => deleteName(index)); // al hacer click sobre la celda elimino
     deleteCell.appendChild(deleteButton);
     tr.appendChild(deleteCell);
+    
 
     // Agrega la fila completa a la tabla
     nameList.appendChild(tr);

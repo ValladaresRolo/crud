@@ -87,8 +87,14 @@ header ul li {
     color: #fff;
 }
 
+.form-label {
+    color: #6929cc;
+    font-size: 1.5rem;
+}
+
 .form-control {
     border-color: #6929cc;
+    margin-bottom: 1rem;
 }
 
 .productos {
@@ -238,9 +244,10 @@ a .rss {
     filter: invert(100%);
 }
 
-.logoFooter{
+.logoFooter {
     width: 70px;
-    min-width: 50px;}
+    min-width: 50px;
+}
 
 a:hover .rss {
     filter: invert(50%);
@@ -253,6 +260,52 @@ a:hover .rss {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+}
+
+.centerDivc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tablaData {
+    hyphens: auto;
+    word-wrap: break-word;
+    border-collapse: collapse;
+    font-size: 1rem;
+    margin: 2rem .5rem;
+    width: 100%;
+}
+
+.tablaData td {
+    overflow-wrap: break-word;
+    /* Esta propiedad ajusta las palabras para que se ajusten al ancho del contenedor */
+}
+
+.parentFooter {
+    background-color: #6828cb;
+}
+
+.areaButtons {
+    background-color: #6828cb !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.areaButtons:hover {
+    background-color: #fff !important;
+    color: #6828cb !important;
+}
+
+.areaButtonsE {
+    background-color: #774100 !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.areaButtonsE:hover {
+    background-color: #fff !important;
+    color: #774100 !important;
 }
 
 @media (max-width: 768px) {
@@ -289,6 +342,12 @@ a:hover .rss {
 
     .btnComGus {
         margin-top: 20%;
+    }
+
+    .tablaData {
+
+        font-size: .7rem;
+        margin: 2rem 0rem;
     }
 
 
