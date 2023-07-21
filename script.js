@@ -15,7 +15,7 @@ let datas = [];
 // Función para agregar un nombre a la lista
 function addName(event) {
   event.preventDefault();
-  const name = nameInput.value.trim();
+  const name = nameInput.value.trim(); // trim() eliminar los espacios en blanco de los extremos de una cadena
   const lastName = lastNameInput.value.trim();
   const email = emailInput.value.trim();
   const phone = phoneInput.value.trim();
@@ -37,10 +37,10 @@ function addName(event) {
     return;
   }
 
-  datas.push({ name, lastName, email, phone });
+  datas.unshift({ name, lastName, email, phone }); // agrego los nuevos datos al principio
 
-  savedatasToLocalStorage();
-  renderdatas();
+  saveDatasToLocalStorage();
+  renderDatas();
   nameInput.value = '';
   lastNameInput.value = '';
   emailInput.value = '';
@@ -48,7 +48,7 @@ function addName(event) {
 }
 
 // Función para mostrar la lista de nombres del DOM
-/*function renderdatas() {
+/*function renderDatas() {
   nameList.innerHTML = '';
 
   datas.forEach((data, index) => {
@@ -59,7 +59,7 @@ function addName(event) {
   });
 }*/
 
-function renderdatas() {
+function renderDatas() {
   nameList.innerHTML = ''; // Vacía el contenido previo de la tabla
 
   datas.forEach((data, index) => {
@@ -128,8 +128,8 @@ function editName(index) {
   datas[index].lastName = newLastName.trim();
   datas[index].email = newEmail.trim();
   datas[index].phone = newPhone.trim();
-  savedatasToLocalStorage();
-  renderdatas();
+  saveDatasToLocalStorage();
+  renderDatas();
 }
 
 
@@ -138,18 +138,18 @@ function editName(index) {
 function deleteName(index) {
   if (confirm('¿Está seguro de eliminar este nombre?')) {
     datas.splice(index, 1);
-    savedatasToLocalStorage();
-    renderdatas();
+    saveDatasToLocalStorage();
+    renderDatas();
   }
 }
 
 // Función para guardar los nombres en el almacenamiento local
-function savedatasToLocalStorage() {
+function saveDatasToLocalStorage() {
   localStorage.setItem('datas', JSON.stringify(datas));
 }
 
 // Función para cargar los nombres desde el almacenamiento local
-function loaddatasFromLocalStorage() {
+function loadDatasFromLocalStorage() {
   const storeddatas = localStorage.getItem('datas');
   if (storeddatas) {
     datas = JSON.parse(storeddatas);
@@ -157,8 +157,8 @@ function loaddatasFromLocalStorage() {
 }
 
 // Cargar los nombres desde el almacenamiento local al inicio
-loaddatasFromLocalStorage();
-renderdatas();
+loadDatasFromLocalStorage();
+renderDatas();
 
 // Agregar el evento de envío al formulario
 nameForm.addEventListener('submit', addName);
