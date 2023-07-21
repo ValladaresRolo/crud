@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+body {
+    background-color: #000;
+
+    font-family: 'Lato', sans-serif;
+
+    min-height: 100vh;
+    /* Establece el mínimo alto del cuerpo para ocupar toda la altura del viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    /* Hace que el contenido se expanda para ocupar el espacio disponible */
+}
+
+header {
+    text-transform: uppercase;
+}
+
+.navbar {
+    margin-bottom: 20px;
+
+}
+
+header ul {
+    width: 450px !important;
+}
+
+header ul li {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.logotop img {
+    width: 45px;
+    height: auto;
+}
+
+.color-blanco {
+    background-color: #000;
+    color: #fff;
+}
+
+.imagenjumbo {
+    max-height: 500px;
+}
+
+.btn-purpura {
+    background-color: #5a23c8;
+    color: #fff
+}
+
+.btn-purpura:hover {
+    background-color: #fff;
+    color: #5a23c8
+}
+
+
+.btnip img {
+    width: 10px;
+    height: auto;
+}
+
+.btnip {
+    margin-right: 2rem;
+}
+
+.btnip a:hover img {
+    transform: scale(1.2);
+    rotate: 45deg;
+}
+
+.bck-color {
+    background-color: #000;
+    color: #fff;
+}
+
+.form-control {
+    border-color: #6929cc;
+}
+
+.productos {
+    background-color: #e6a161;
+    margin: 3rem 0 4rem;
+    padding: 40%;
+
+
+}
+
+.caja-productos {
+    margin-top: 5%;
+
+
+}
+
+.caja-productos .card-body {
+    background-color: #5a23c8;
+    color: #fff
+}
+
+
+.descripcion {
+    font-size: 1.4rem;
+}
+
+.blog {
+    padding: 4%;
+}
+
+.featurette {
+    background-color: #e6a161;
+
+}
+
+.featurette h2 {
+    font-size: 2.3rem;
+    color: #6929cc;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.featurette h3 {
+    font-size: 1.3rem;
+    border-left: 4px solid #6929cc;
+    padding-left: 3%;
+    margin: 5% 0
+}
+
+
+.paddingBlog {
+    padding: 5% 2% 2% 5%;
+}
+
+.paddingBlogPeriodista {
+    padding: 5% 5% 2% 2%;
+    border-left: 1px solid #fff
+}
+
+
+.agrad {
+    height: 100%;
+}
+
+footer {
+    background-color: #6828cb;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+footer h5 {
+    font-weight: 600;
+    color: #e6a161;
+}
+
+footer .text-body-secondary {
+    color: #fff !important
+}
+
+footer a:hover.text-body-secondary {
+    color: #e6a161 !important
+}
+
+.purpleBackgroud {
+    background-color: #6828cb;
+}
+
+.centerImage {
+    margin: auto;
+}
+
+.paddingFooter {
+    padding: 2rem 4rem 0rem
+}
+
+.colorLetraBlanco {
+    color: #fff
+}
+
+.colorLetraPurpura {
+    color: #6929cc;
+}
+
+.badgeCustom {
+    padding: 10px;
+    font-weight: 300;
+    margin: 5px
+}
+
+.botonCompartir,
+.botonMeGusta {
+    padding: 15px 50px;
+}
+
+.botonMeGusta {
+    background-color: #6929cc;
+    color: #fff;
+}
+
+.botonMeGusta:hover {
+    background-color: gray;
+    color: #e6a161;
+}
+
+.botonCompartir {
+    background-color: #fff;
+    color: gray;
+}
+
+.botonCompartir:hover {
+    background-color: gray;
+    color: #e6a161;
+}
+
+.btnComGus {
+    margin-top: 100%;
+}
+
+
+.rss {
+    width: 35px;
+    height: auto;
+}
+
+a .rss {
+    filter: invert(100%);
+}
+
+a:hover .rss {
+    filter: invert(50%);
+}
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    header ul {
+        width: none;
+    }
+
+    header ul li {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .imagenjumbo {
+        max-height: 350px;
+    }
+
+    .paddingFooter {
+        text-align: center;
+    }
+
+    .paddingBlog {
+        padding: 5%;
+    }
+
+    .paddingBlogPeriodista {
+        padding: 5%;
+        border-left: none;
+        border-top: 1px solid #fff
+    }
+
+    .featurette h2 {
+        text-align: center;
+    }
+
+    .btnComGus {
+        margin-top: 20%;
+    }
+
+
+
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+}
+
+.bd-mode-toggle {
+    z-index: 1500;
+}
