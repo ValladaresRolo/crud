@@ -37,7 +37,7 @@ function addName(event) {
     return;
   }
 
-  datas.unshift({ name, lastName, email, phone }); // agrego los nuevos datos al principio
+  datas.unshift({ name, lastName, email, phone }); // agrego los nuevos datos al principio  
 
   saveDatasToLocalStorage();
   renderDatas();
@@ -109,13 +109,13 @@ function renderDatas() {
 
 
 // Función para editar un nombre en la lista
-function editName(index) {
+function editName(index) { //muestra el cuadro de dialogo para modificar el valor
   const newName = prompt('Ingrese un nuevo nombre:', datas[index].name);
   const newLastName = prompt('Ingrese un nuevo apellido:', datas[index].lastName);
   const newEmail = prompt('Ingrese un nuevo email:', datas[index].email);
   const newPhone = prompt('Ingrese un nuevo teléfono:', datas[index].phone);
 
-  if (
+  if ( // verifica si esta nulo o vacio
     newName === null || newName.trim() === '' ||
     newLastName === null || newLastName.trim() === '' ||
     newEmail === null || newEmail.trim() === '' ||
@@ -124,12 +124,12 @@ function editName(index) {
     return;
   }
 
-  datas[index].name = newName.trim();
+  datas[index].name = newName.trim(); // actualizamos el valor de la variable por el nuevo dato trim para eliminar los espacios en blanco al principio y final
   datas[index].lastName = newLastName.trim();
   datas[index].email = newEmail.trim();
   datas[index].phone = newPhone.trim();
-  saveDatasToLocalStorage();
-  renderDatas();
+  saveDatasToLocalStorage(); // Guardar los datos actualizados en el almacenamiento local
+  renderDatas(); // publica la tabla con los datos actualizados
 }
 
 
